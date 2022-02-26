@@ -44,7 +44,6 @@ def upload_file():
             flash('8 Images are required to make a beautiful collage')
             return render_template('upload.html')
         else:
-            pass
             for file in files:
                 if file and allowed_file(file.filename):
                     filename = secure_filename(file.filename)
